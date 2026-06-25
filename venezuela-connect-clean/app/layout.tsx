@@ -4,14 +4,7 @@ import Navbar from '@/components/shared/Navbar'
 
 export const metadata: Metadata = {
   title: 'Venezuela Connect | Información Humanitaria',
-  description: 'Plataforma centralizada de información humanitaria verificada para Venezuela y la diáspora venezolana.',
-  keywords: 'venezuela, emergencia, refugios, hospitales, diáspora, humanitaria',
-  openGraph: {
-    title: 'Venezuela Connect',
-    description: 'Información humanitaria verificada para Venezuela',
-    type: 'website',
-    locale: 'es_VE',
-  },
+  description: 'Plataforma centralizada de información humanitaria verificada para Venezuela.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -24,11 +17,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
       </head>
       <body>
-        <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:bg-blue-600 focus:text-white focus:px-4 focus:py-2 focus:rounded">
-          Ir al contenido principal
-        </a>
         <Navbar />
-        <main id="main">{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   )
