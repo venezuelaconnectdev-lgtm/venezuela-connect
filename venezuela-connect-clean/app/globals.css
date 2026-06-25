@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg:      #0F172A;
+  --surface: #1E293B;
+  --border:  #334155;
+  --primary: #1E3A5F;
+  --danger:  #DC2626;
+  --warning: #D97706;
+  --success: #16A34A;
+  --text:    #F1F5F9;
+  --muted:   #64748B;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar       { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+@keyframes ping {
+  0%, 100% { transform: scale(1);   opacity: 0.75; }
+  50%       { transform: scale(1.6); opacity: 0;    }
+}
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1;   }
+  50%       { opacity: 0.5; }
+}
+
+.animate-ping-slow { animation: ping 2s cubic-bezier(0,0,0.2,1) infinite; }
+.animate-pulse-slow { animation: pulse-slow 3s ease-in-out infinite; }
+
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-primary:hover { background: #1d4ed8; }
+
+.btn-outline {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+.btn-outline:hover { border-color: #4b6783; color: var(--text); }
