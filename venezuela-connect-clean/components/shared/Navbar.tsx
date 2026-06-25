@@ -11,6 +11,7 @@ const NAV_LINKS = [
   { href: '/noticias',   label: '📢 Noticias'  },
   { href: '/donaciones', label: '💰 Donar'     },
   { href: '/diaspora',   label: '🌎 Diáspora'  },
+  { href: '/recursos',   label: '🔗 Recursos'  },
 ]
 
 export default function Navbar() {

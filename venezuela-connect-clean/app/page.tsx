@@ -123,6 +123,17 @@ export default async function HomePage() {
             <button className="btn-primary">Ver guía para la diáspora →</button>
           </Link>
         </div>
+
+        <div style={{ marginTop: 12, background: '#0f2a1a', border: '1px solid #16A34A44', borderRadius: 10, padding: 20 }}>
+          <div style={{ fontSize: 18, marginBottom: 6 }}>🔗 Recursos y herramientas</div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginBottom: 14 }}>
+            <div style={{ fontSize: 13, color: '#94a3b8' }}>🔍 Búsqueda de personas — venezuelatebusca.com</div>
+            <div style={{ fontSize: 13, color: '#94a3b8' }}>📱 Recarga de celular a distancia — rebtel.com</div>
+          </div>
+          <Link href="/recursos">
+            <button className="btn-primary" style={{ background: '#16A34A' }}>Ver todos los recursos →</button>
+          </Link>
+        </div>
       </div>
 
       <EmergencyFAB />
